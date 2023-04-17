@@ -26,11 +26,7 @@ pipeline {
     }
     stage('codequality'){
         steps{
-       sh 'mvn clean verify sonar:sonar \
-  -Dsonar.projectKey=team5codereview \
-  -Dsonar.projectName='team5codereview' \
-  -Dsonar.host.url=http://ec2-54-80-186-13.compute-1.amazonaws.com:9000 \
-  -Dsonar.token=sqp_e1aa77ad7ebfec56e06f944bc84e4e2688118b08'
+       sh 'mvn clean verify sonar:sonar -Dsonar.projectKey=team5codereview -Dsonar.projectName="team5codereview" -Dsonar.host.url=http://ec2-54-80-186-13.compute-1.amazonaws.com:9000 -Dsonar.token=sqp_e1aa77ad7ebfec56e06f944bc84e4e2688118b08'
         }
     }
   }
